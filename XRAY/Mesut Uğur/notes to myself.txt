@@ -1,0 +1,5 @@
+Insulation of windings has not yet been considered, however the fill factor is below 0.2, so there is plenty of space right now.
+Leakage inductance calculation has not been established.
+Magnetizing inductance calculation has not been established.
+Voltage regulation should be considered as the resistance of the secondary winding is high.
+Proximity effect has not been considered.
