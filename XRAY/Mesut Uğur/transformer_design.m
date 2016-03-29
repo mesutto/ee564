@@ -202,14 +202,15 @@ end
 % Core loss for harmonics
 % Using curve fitting
 
-PL = zeros(1,total);
+PL_h = zeros(1,total);
 core_harmonic_loss = zeros(1,total);
 
 for k = 1:total
-    PL(k) = a*(f*harmonic(k))^c*flux_density_harmonic(k)^d; % mW/cm^3
-    core_harmonic_loss(k) = PL(k)*Ve/1e6; % Watts
+    PL_h(k) = a*(f*harmonic(k))^c*(flux_density_harmonic(k)*10)^d; % mW/cm^3
+    core_harmonic_loss(k) = PL_h(k)*Ve/1e6; % Watts
 end
 
+total_core_loss = sum(core_harmonic_loss(:)); % Watts
 
 
 
